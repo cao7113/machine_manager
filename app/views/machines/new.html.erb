@@ -1,0 +1,35 @@
+<h1>New machine</h1>
+
+<% form_for(@machine) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :comment %><br />
+    <%= f.text_field :comment %>
+  </p>
+  <p>
+    <%= f.label :used_by %><br />
+    <%= f.text_field :used_by %>
+  </p>
+  <p>
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </p>
+  <p>
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', machines_path %>

@@ -1,0 +1,33 @@
+<p>
+  <b>Name:</b>
+  <%=h @machine.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @machine.description %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @machine.comment %>
+</p>
+
+<p>
+  <b>Used by:</b>
+  <%=h @machine.used_by %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @machine.location %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @machine.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_machine_path(@machine) %> |
+<%= link_to 'Back', machines_path %>

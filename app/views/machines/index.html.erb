@@ -1,0 +1,30 @@
+<h1>机器列表</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Comment</th>
+    <th>Used by</th>
+    <th>Location</th>
+    <th>Status</th>
+  </tr>
+
+<% @machines.each do |machine| %>
+  <tr>
+    <td><%=h machine.name %></td>
+    <td><%=h machine.description %></td>
+    <td><%=h machine.comment %></td>
+    <td><%=h machine.used_by %></td>
+    <td><%=h machine.location %></td>
+    <td><%=h machine.status %></td>
+    <td><%= link_to 'Show', machine %></td>
+    <td><%= link_to 'Edit', edit_machine_path(machine) %></td>
+    <td><%= link_to 'Destroy', machine, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New machine', new_machine_path %>
